@@ -1,0 +1,28 @@
+<html>
+<head>
+ <title>Counters data by date</title>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+ <h1>Counters data by date:</h1>
+ <table style="width:100%;">
+  <tr>
+   <th>date</th>
+   <th>counter id</th>
+   <th>counter num</th>
+   <th>counter title</th>
+   <th>counter data</th>
+  </tr>
+   {% for row in data %}
+  <tr>
+    <td>{{ row.reg_date }}</td>
+    <td>{{ row.counter.id }}</td>
+    <td>{{ row.counter.num }}</td>
+    <td>{{ row.counter.name }}</td>
+    <td>{{ row.data }}</td>
+  </tr>
+   {% endfor %}
+ </table>
+</body>
+</html>

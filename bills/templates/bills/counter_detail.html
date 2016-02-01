@@ -1,0 +1,17 @@
+{% extends 'bills/base.html' %}
+{% block content %}
+ <h4>Counter data for {{ data.cdata.name }}</h4>
+ <table style="width:100%;">
+  <tr>
+   <th>date</th>
+   <th>counter data</th>
+  </tr>
+   {% for row in data.fdata %}
+  <tr>
+    <td>{{ row.reg_date }}</td>
+    <td>{{ row.data }}</td>
+  </tr>
+   {% endfor %}
+ </table>
+{% endblock %}
+

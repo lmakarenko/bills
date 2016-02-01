@@ -1,0 +1,19 @@
+{% extends 'bills/base.html' %}
+{% block content %}
+ <table style="width:100%;">
+  <tr>
+   <th>date</th>
+   <th>counter title</th>
+   <th>counter data</th>
+  </tr>
+   {% for row in data %}
+  <tr>
+    <td>{{ row.reg_date }}</td>
+    <td>
+     <a href="/counter/{{ row.counter.id }}">{{ row.counter.name }}</a>
+    </td>
+    <td>{{ row.data }}</td>
+  </tr>
+   {% endfor %}
+ </table>
+{% endblock content %}
