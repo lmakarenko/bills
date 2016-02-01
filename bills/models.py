@@ -52,4 +52,3 @@ class counter_data(models.Model):
 
     def __str__(self):
         return str(self.reg_date) + ': ' + str(self.data)
-

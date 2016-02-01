@@ -10,6 +10,6 @@ def counter_data_list(request):
 def counter_data_by(request, pk):
     #data = get_object_or_404(counter, pk=pk)
     cdata = counter.objects.get(pk=pk)
-    fdata = counter_data.objects.filter(pk=pk).order_by('-reg_date')
+    fdata = counter_data.objects.filter(counter_id=pk).order_by('-reg_date')
     data = {'cdata': cdata, 'fdata': fdata}
     return render(request, 'bills/counter_detail.html', {'data': data})
